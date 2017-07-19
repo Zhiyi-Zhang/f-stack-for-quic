@@ -18,6 +18,7 @@ TARGET="helloworld"
 all:
 	cc -O -gdwarf-2  -I../lib -o ${TARGET} main.c ${LIBS}
 	cc -O -gdwarf-2  -I../lib -o ${TARGET}_epoll main_epoll.c ${LIBS}
+	cc -O -gdwarf-2  -I../lib -o ${TARGET}_udp  udp_main.c ${LIBS}
 
 .PHONY: clean
 clean:

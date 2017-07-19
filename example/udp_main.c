@@ -63,18 +63,18 @@ int loop(void *arg)
     struct kevent event = events[i];
 
     if (event.filter == EVFILT_READ) {
-      sockaddr_in remoteAddr;
+      struct sockaddr_in remoteAddr;
       int nAddrLen = sizeof(remoteAddr);
       char buf[256];
       size_t recvLen = ff_recvfrom(sockfd, buf, sizeof(buf), 0,
-                                   (sockaddr *)&remoteAddr, &nAddrLen);
+                                   (struct linux_sockaddr*)&remoteAddr, &nAddrLen);
 
       if (recvLen > 0) {
         printf("bytes %zu are available to recv...\n", (size_t)event.data);
       }
 
       ff_sendto(sockfd, html, sizeof(html), 0,
-                (sockaddr *)&remoteAddr, nAddrLen);
+                (struct linux_sockaddr *)&remoteAddr, nAddrLen);
 
     }
     else {
