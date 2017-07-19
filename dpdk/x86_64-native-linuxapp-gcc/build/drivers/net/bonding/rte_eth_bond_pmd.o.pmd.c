@@ -1,0 +1,1 @@
+const char eth_bond_pmd_info[] __attribute__((used)) = "PMD_INFO_STRING= {\"name\" : \"eth_bond\", \"params\" : \"slave=<ifc> primary=<ifc> mode=[0-6] xmit_policy=[l2 | l23 | l34] socket_id=<int> mac=<mac addr> lsc_poll_period_ms=<int> up_delay=<int> down_delay=<int>\", \"pci_ids\" : []}";

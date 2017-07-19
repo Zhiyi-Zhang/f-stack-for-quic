@@ -1,0 +1,1 @@
+const char virtio_user_pmd_info[] __attribute__((used)) = "PMD_INFO_STRING= {\"name\" : \"virtio_user\", \"params\" : \"path=<path> mac=<mac addr> cq=<int> queue_size=<int> queues=<int>\", \"pci_ids\" : []}";
